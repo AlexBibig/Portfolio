@@ -1,0 +1,62 @@
+@media (max-width: 899px) {
+  main aside .skills {
+    margin-right: -15px;
+  }
+  main aside .skills ul {
+    margin-left: 15px;
+  }
+  .main_info .contacts_and_links .contacts {
+    width: 60%;
+  }
+}
+@media (max-width: 751px) {
+  .header .avatar img {
+    height: 100%;
+    width: 100%;
+  }
+  main aside .skills {
+    border-right: none;
+  }
+  main .main_info .contacts_and_links {
+    flex-direction: column;
+  }
+  main .main_info .contacts_and_links .contacts,
+  main .main_info .contacts_and_links .links {
+    width: 100%;
+  }
+  main .main_info .contacts_and_links .contacts {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 551px) {
+  .header {
+    display: block;
+  }
+  .header .info {
+    text-align: center;
+    margin-top: 20px;
+  }
+  main {
+    display: block;
+  }
+  main h2 {
+    text-align: center;
+  }
+  main aside {
+    display: block;
+    width: auto;
+  }
+  main aside .skills div > ul {
+    padding: 0 27%;
+  }
+  main .main_info {
+    width: auto;
+  }
+  main .main_info .contacts_and_links {
+    flex-direction: column;
+  }
+  main .main_info > div:first-child {
+    padding: 30px 0px;
+    border-top: 2px solid black;
+  }
+}

@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+html {
+  font-family: 'Open Sans', sans-serif;
+}
+.wrapper {
+  max-width: 900px;
+  margin: 25px auto;
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.6);
+}
+span {
+  font-weight: bold;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  background-color: #2b57b1;
+  border-bottom: 2px solid black;
+}
+.header .avatar img {
+  width: 45%;
+  height: auto;
+}
+.header .info {
+  text-align: right;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.header .info .name {
+  font-size: 50px;
+  font-weight: 700;
+}
+.header .info p {
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+main {
+  display: flex;
+  background-color: #f4f4f4;
+}
+main h2 {
+  margin-bottom: 20px;
+}
+main a,
+main a:visited {
+  text-decoration: none;
+  color: #2b57b1;
+  border-bottom: 2px solid #2b57b1;
+}
+main aside {
+  padding: 25px;
+  width: 23%;
+}
+main aside .skills {
+  border-right: 2px solid black;
+}
+main aside .skills h2 {
+  text-align: center;
+}
+main aside .skills ul {
+  margin-left: 30px;
+}
+main aside .skills ul li {
+  margin-bottom: 5px;
+}
+main aside .skills .hard_skills,
+main aside .skills .soft_skills {
+  margin-bottom: 30px;
+}
+main .main_info {
+  padding: 25px;
+  width: 77%;
+}
+main .main_info ul {
+  list-style: none;
+}
+main .main_info .contacts_and_links {
+  display: flex;
+}
+main .main_info .contacts_and_links .contacts li a {
+  border: none;
+}
+main .main_info .contacts_and_links div {
+  width: 50%;
+}
+main .main_info .contacts_and_links div li {
+  margin-bottom: 5px;
+}
+main .main_info .summary p {
+  margin-bottom: 10px;
+  line-height: 22px;
+}
+main .main_info .portfolio ul {
+  list-style: circle;
+}
+main .main_info .portfolio ul li {
+  margin-bottom: 10px;
+}
+main .main_info .education li:not(:last-child),
+main .main_info .experience li:not(:last-child) {
+  margin-bottom: 20px;
+}
+main .main_info .education p:not(:last-child),
+main .main_info .experience p:not(:last-child) {
+  margin-bottom: 10px;
+}
+main .main_info > div:first-child {
+  padding-bottom: 30px;
+}
+main .main_info > div:not(:first-child) {
+  padding: 30px 0px;
+  border-top: 2px solid black;
+}
