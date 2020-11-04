@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+html {
+  font-family: 'Open Sans', sans-serif;
+}
+.wrapper {
+  max-width: 900px;
+  margin: 25px auto;
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.6);
+}
+span {
+  font-weight: bold;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  background-color: #2b57b1;
+  border-bottom: 2px solid black;
+  .avatar img {
+    width: 45%;
+    height: auto;
+  }
+  .info {
+    text-align: right;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .name {
+      font-size: 50px;
+      font-weight: 700;
+    }
+    p {
+      margin-bottom: 30px;
+      font-size: 20px;
+    }
+  }
+}
+
+main {
+  display: flex;
+  background-color: #f4f4f4;
+  h2 {
+    margin-bottom: 20px;
+  }
+  a,
+  a:visited {
+    text-decoration: none;
+    color: #2b57b1;
+    border-bottom: 2px solid #2b57b1;
+  }
+  aside {
+    padding: 25px;
+    width: 23%;
+    .skills {
+      border-right: 2px solid black;
+      h2 {
+        text-align: center;
+      }
+      ul {
+        margin-left: 30px;
+        li {
+          margin-bottom: 5px;
+        }
+      }
+      .hard_skills,
+      .soft_skills {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .main_info {
+    padding: 25px;
+    width: 77%;
+    ul {
+      list-style: none;
+    }
+    .contacts_and_links {
+      display: flex;
+      .contacts li a {
+        border: none;
+      }
+      div {
+        width: 50%;
+        li {
+          margin-bottom: 5px;
+        }
+      }
+    }
+    .summary {
+      p {
+        margin-bottom: 10px;
+        line-height: 22px;
+      }
+    }
+
+    .portfolio {
+      ul {
+        list-style: circle;
+        li {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .education,
+    .experience {
+      li:not(:last-child) {
+        margin-bottom: 20px;
+      }
+      p:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .main_info > div:first-child {
+    padding-bottom: 30px;
+  }
+  .main_info > div:not(:first-child) {
+    padding: 30px 0px;
+    border-top: 2px solid black;
+  }
+}
