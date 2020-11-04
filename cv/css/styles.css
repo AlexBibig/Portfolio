@@ -96,12 +96,6 @@ main .main_info .summary p {
   margin-bottom: 10px;
   line-height: 22px;
 }
-main .main_info .portfolio ul {
-  list-style: circle;
-}
-main .main_info .portfolio ul li {
-  margin-bottom: 10px;
-}
 main .main_info .education li:not(:last-child),
 main .main_info .experience li:not(:last-child) {
   margin-bottom: 20px;
