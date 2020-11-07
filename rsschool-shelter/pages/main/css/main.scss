@@ -30,11 +30,11 @@ $color-dark-3xl: #292929;
 }
 .container {
   margin: 0 auto;
-  max-width: 1280px;
+  max-width: 100%;
 }
 .wrapper {
   margin: 0 auto;
-  width: calc(100% - 80px);
+  width: calc(1280px - 80px);
 }
 .button {
   padding: 15px 45px;
@@ -289,6 +289,8 @@ $color-dark-3xl: #292929;
 
   &__image {
     margin-bottom: 30px;
+    max-width: 100%;
+    height: auto;
   }
 
   &__name {
@@ -680,11 +682,12 @@ $color-dark-3xl: #292929;
     }
     &__cart {
       margin: 0 auto;
+      margin: 3px;
     }
     &__button-arrow {
       position: absolute;
       left: calc(0% - 10px + 68px);
-      top: 455px;
+      top: 470px;
     }
     &__button-arrow:last-child {
       left: calc(100% - 42px - 68px);

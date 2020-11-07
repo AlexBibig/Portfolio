@@ -30,11 +30,11 @@ $color-dark-3xl: #292929;
 }
 .container {
   margin: 0 auto;
-  max-width: 1280px;
+  max-width: 100%;
 }
 .wrapper {
   margin: 0 auto;
-  width: calc(100% - 80px);
+  width: calc(1280px - 80px);
 }
 .button {
   padding: 15px 45px;
@@ -408,6 +408,9 @@ $color-dark-3xl: #292929;
     }
     &__nav-item:first-child {
       margin-top: 173px;
+    }
+    &__nav-item:hover {
+      color: $color-light-s;
     }
 
     &__burger-menu_change {

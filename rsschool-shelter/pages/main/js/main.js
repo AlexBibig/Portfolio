@@ -9,14 +9,23 @@ const overlay = document.querySelector('.overlay');
 // other variables
 
 burgerMenuIcon.addEventListener('click', openBurgerMenu);
+overlay.addEventListener('click', closeBurgerMenu);
 
-// openBurgerMenu
+// BurgerMenu
 function openBurgerMenu() {
   burgerMenuIcon.classList.toggle('header__burger-menu_change');
   menuNav.classList.toggle('header__nav_change');
   menuLogo.classList.toggle('header__logo_change');
   overlay.classList.toggle('overlay_show');
   document.body.classList.toggle('body_no-scroll');
+}
+
+function closeBurgerMenu() {
+  burgerMenuIcon.classList.remove('header__burger-menu_change');
+  menuNav.classList.remove('header__nav_change');
+  menuLogo.classList.remove('header__logo_change');
+  overlay.classList.remove('overlay_show');
+  document.body.classList.remove('body_no-scroll');
 }
 // slider
 function setSlider() {
@@ -60,6 +69,12 @@ async function getPets() {
     let card = document.createElement('div');
     card.className = 'pets__cart';
 
+    // open popup
+
+    card.addEventListener('click', () => {
+      console.log(1);
+    });
+
     let img = document.createElement('img');
     img.src = element.img;
     img.alt = 'solo-pets-image';
@@ -82,5 +97,10 @@ async function getPets() {
 
   setSlider();
 }
+
+// popup
+
+// const petsCart = document.querySelector('.pets__cart');
+// petsCart.addEventListener('click', openPopup());
 
 getPets();

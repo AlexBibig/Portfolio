@@ -21,12 +21,12 @@
 
 .container {
   margin: 0 auto;
-  max-width: 1280px;
+  max-width: 100%;
 }
 
 .wrapper {
   margin: 0 auto;
-  width: calc(100% - 80px);
+  width: calc(1280px - 80px);
 }
 
 .button {
@@ -509,6 +509,9 @@
   }
   .header__nav-item:first-child {
     margin-top: 173px;
+  }
+  .header__nav-item:hover {
+    color: #fafafa;
   }
   .header__burger-menu_change {
     z-index: 3;
