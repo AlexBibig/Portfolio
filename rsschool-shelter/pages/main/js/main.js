@@ -9,7 +9,7 @@ const overlay = document.querySelector('.overlay');
 // other variables
 
 burgerMenuIcon.addEventListener('click', openBurgerMenu);
-overlay.addEventListener('click', closeBurgerMenu);
+overlay.addEventListener('click', closeOverlay);
 
 // BurgerMenu
 function openBurgerMenu() {
@@ -20,7 +20,7 @@ function openBurgerMenu() {
   document.body.classList.toggle('body_no-scroll');
 }
 
-function closeBurgerMenu() {
+function closeOverlay() {
   burgerMenuIcon.classList.remove('header__burger-menu_change');
   menuNav.classList.remove('header__nav_change');
   menuLogo.classList.remove('header__logo_change');
@@ -61,30 +61,35 @@ async function getPets() {
   pets = await response.json();
 
   const randomly = () => Math.random() - 0.5;
-  let result = [...pets].sort(randomly);
+  const result = [...pets].sort(randomly);
+  console.log(result);
 
   const sliderConainer = document.querySelector('.pets__slider');
 
   result.forEach(element => {
-    let card = document.createElement('div');
+    const card = document.createElement('div');
     card.className = 'pets__cart';
 
     // open popup
 
     card.addEventListener('click', () => {
-      console.log(1);
+      const popup = document.createElement('div');
+      popup.className = 'popup';
+
+      overlay.classList.add('overlay_show');
+      document.body.classList.add('body_no-scroll');
     });
 
-    let img = document.createElement('img');
+    const img = document.createElement('img');
     img.src = element.img;
     img.alt = 'solo-pets-image';
     img.className = 'pets__image';
 
-    let name = document.createElement('h3');
+    const name = document.createElement('h3');
     name.className = 'pets__name title';
     name.textContent = element.name;
 
-    let button = document.createElement('button');
+    const button = document.createElement('button');
     button.className = 'pets__button secondary-button';
     button.textContent = 'Learn more';
 
