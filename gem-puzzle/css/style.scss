@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  transform: scale(1.03);
+}
+
+.game {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5px;
+  background: #005caa;
+  border-radius: 10px;
+  .menu,
+  .stats {
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5px;
+    button {
+      background-color: whitesmoke;
+      font-size: 1rem;
+      padding: 5px;
+      border-radius: 10px;
+    }
+    span {
+      color: whitesmoke;
+    }
+  }
+  .grid {
+    position: relative;
+    width: 300px;
+    height: 300px;
+
+    button {
+      box-sizing: border-box;
+      width: 74px;
+      height: 74px;
+      padding: 3px;
+      background-color: whitesmoke;
+      color: #005caa;
+      border-radius: 10px;
+      font-size: 2rem;
+      font-weight: bold;
+      position: absolute;
+    }
+    button:hover {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: rgba(41, 41, 41, 0.9);
+  visibility: hidden;
+
+  &_show {
+    visibility: visible;
+  }
+
+  .resume-items {
+    width: 300px;
+    margin: 0 auto;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      font-size: 20px;
+      line-height: 35px;
+      letter-spacing: 2px;
+      font-style: italic;
+      text-align: center;
+      color: yellow;
+      text-shadow: 0 0 5px whitesmoke;
+      margin-bottom: 40px;
+    }
+    .resume-item {
+      color: silver;
+      margin-bottom: 60px;
+    }
+    .resume-item:hover {
+      color: whitesmoke;
+      cursor: pointer;
+    }
+  }
+}
