@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+button:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+.game {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 5px;
+  background: #005caa;
+  border-radius: 10px;
+}
+
+.game .menu,
+.game .stats {
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 5px;
+}
+
+.game .menu button,
+.game .stats button {
+  background-color: whitesmoke;
+  font-size: 1rem;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.game .menu span,
+.game .stats span {
+  color: whitesmoke;
+}
+
+.game .grid {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.game .grid button {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 74px;
+  height: 74px;
+  padding: 3px;
+  background-color: whitesmoke;
+  color: #005caa;
+  border-radius: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+  position: absolute;
+}
+
+.game .grid button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: rgba(41, 41, 41, 0.9);
+  visibility: hidden;
+}
+
+.overlay_show {
+  visibility: visible;
+}
+
+.overlay .resume-items {
+  width: 300px;
+  margin: 0 auto;
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.overlay .resume-items h1 {
+  font-size: 20px;
+  line-height: 35px;
+  letter-spacing: 2px;
+  font-style: italic;
+  text-align: center;
+  color: yellow;
+  text-shadow: 0 0 5px whitesmoke;
+  margin-bottom: 40px;
+}
+
+.overlay .resume-items .resume-item {
+  color: silver;
+  margin-bottom: 60px;
+}
+
+.overlay .resume-items .resume-item:hover {
+  color: whitesmoke;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */
