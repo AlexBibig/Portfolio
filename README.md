@@ -6,6 +6,12 @@ My Curriculum vitae
 
 [Click to open](https://alexbibig.github.io/Portfolio/cv/)
 
+## The Rolling Scopes School - Gem Puzzle
+
+Used technologies: Scss, Native JavaScript
+
+[Click to open](https://rolling-scopes-school.github.io/alexbibig-JS2020Q3/gem-puzzle/)
+
 ## TeachMeSkills Course Project - Rick & Morty Database
 
 Used technologies: React, React Hooks, React-Redux, React-Router, Redux-Thunk
