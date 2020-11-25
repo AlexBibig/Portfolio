@@ -24,13 +24,15 @@ button:hover {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   padding: 5px;
-  background: #005caa;
+  background: whitesmoke;
   border-radius: 10px;
+  border: 3px solid black;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.game .menu,
-.game .stats {
-  height: 3rem;
+.game .menu {
+  height: 6rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -40,20 +42,35 @@ button:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 15px 5px;
+  padding: 0 5px;
 }
 
-.game .menu button,
-.game .stats button {
-  background-color: whitesmoke;
-  font-size: 1rem;
-  padding: 5px;
+.game .menu .stats {
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.game .menu button {
+  background-color: #e6bcad;
+  padding: 10px;
   border-radius: 10px;
 }
 
-.game .menu span,
-.game .stats span {
-  color: whitesmoke;
+.game .menu span {
+  color: black;
+  font-style: italic;
 }
 
 .game .grid {
@@ -68,8 +85,8 @@ button:hover {
   width: 74px;
   height: 74px;
   padding: 3px;
-  background-color: whitesmoke;
-  color: #005caa;
+  background-color: #e6bcad;
+  color: black;
   border-radius: 10px;
   font-size: 2rem;
   font-weight: bold;
@@ -77,7 +94,7 @@ button:hover {
 }
 
 .game .grid button:hover {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(230, 188, 173, 0.8);
 }
 
 .overlay {
@@ -88,20 +105,46 @@ button:hover {
   width: 100%;
   height: 100%;
   background: rgba(41, 41, 41, 0.9);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   visibility: hidden;
+  font-style: italic;
 }
 
 .overlay_show {
   visibility: visible;
 }
 
-.overlay .resume-items {
-  width: 300px;
+.overlay .resume-items,
+.overlay .new-game-items {
   margin: 0 auto;
-  height: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.overlay .resume-items > *,
+.overlay .new-game-items > * {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.overlay .resume-items > *:hover,
+.overlay .resume-items :active,
+.overlay .new-game-items > *:hover,
+.overlay .new-game-items :active {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.overlay .resume-items {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -133,5 +176,34 @@ button:hover {
 .overlay .resume-items .resume-item:hover {
   color: whitesmoke;
   cursor: pointer;
+}
+
+.overlay .new-game-items {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 250px;
+  height: 250px;
+}
+
+.overlay .new-game-items button {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+  background-color: #e6bcad;
+  color: black;
+  border-radius: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.overlay .hidden {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
