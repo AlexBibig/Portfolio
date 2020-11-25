@@ -12,6 +12,18 @@ Used technologies: Scss, Native JavaScript
 
 [Click to open](https://alexbibig.github.io/Portfolio/gem-puzzle/)
 
+## The Rolling Scopes School - Shelter Project
+
+Used technologies: Scss, BEM-Metodology, Native JavaScript
+
+[Click to open](https://alexbibig.github.io/Portfolio/rsschool-shelter/pages/main/main.html)
+
+## The Rolling Scopes School - Calculator
+
+Used technologies: OOP, Native JavaScript
+
+[Click to open](https://alexbibig.github.io/Portfolio/calculator/)
+
 ## TeachMeSkills Course Project - Rick & Morty Database
 
 Used technologies: React, React Hooks, React-Redux, React-Router, Redux-Thunk
@@ -23,12 +35,6 @@ Used technologies: React, React Hooks, React-Redux, React-Router, Redux-Thunk
 Used technologies: React
 
 [Click to open](https://alexbibig.github.io/TMS-React-toDoList/)
-
-## The Rolling Scopes School - Shelter Project
-
-Used technologies: Scss, BEM-Metodology, Native JavaScript
-
-[Click to open](https://alexbibig.github.io/Portfolio/rsschool-shelter/pages/main/main.html)
 
 ## TeachMeSkills Project - Landing Page layout
 
