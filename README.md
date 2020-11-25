@@ -10,7 +10,7 @@ My Curriculum vitae
 
 Used technologies: Scss, Native JavaScript
 
-[Click to open](https://rolling-scopes-school.github.io/alexbibig-JS2020Q3/gem-puzzle/)
+[Click to open](https://alexbibig.github.io/Portfolio/gem-puzzle/)
 
 ## TeachMeSkills Course Project - Rick & Morty Database
 
