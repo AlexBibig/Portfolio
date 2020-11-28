@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-shadow: 1px 1px 2px black;
+}
+
+.btn {
+  background: rgba(189, 195, 199, 0.3);
+  color: white;
+  font-size: 1rem;
+  width: 100px;
+  height: 100px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  transition: 0.5s;
+}
+.btn:hover {
+  background: silver;
+  color: #000000;
+}
+.btn:active,
+.btn:focus {
+  outline: 0;
+}
+.btn:active {
+  transform: scale(1.02);
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center center;
+  color: #fff;
+  transition: background-image 0.7s ease-in-out;
+}
+
+.main-block {
+  .time {
+    font-size: 7rem;
+    .dateDescription {
+      font-size: 2rem;
+    }
+  }
+
+  h1 {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    span {
+      display: inline-block;
+      outline: none;
+    }
+  }
+
+  h2 {
+    margin-bottom: 0.5rem;
+    outline: none;
+  }
+}
+
+.func-block {
+  margin-top: 2rem;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  .quotation {
+    flex-basis: 60%;
+    font-style: italic;
+    blockquote {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.weather-block {
+  margin-top: 3rem;
+  width: 50rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid white;
+  background: rgba(189, 195, 199, 0.3);
+  color: white;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+  .owf {
+    font-size: 4rem;
+  }
+  * {
+    margin-bottom: 0.3rem;
+  }
+}
+
+@media (max-width: 850px) {
+  html {
+    font-size: 14px;
+  }
+
+  .func-block {
+    height: 10rem;
+  }
+
+  .weather-block {
+    width: 40rem;
+  }
+}
+@media (max-width: 850px) {
+  html {
+    font-size: 12px;
+  }
+  .main-block {
+    .time {
+      font-size: 4rem;
+      .dateDescription {
+        font-size: 1.5rem;
+      }
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+
+  .func-block {
+    position: relative;
+    height: 20rem;
+    .quotation-btn {
+      top: 10px;
+      left: 10px;
+      width: 70px;
+      height: 70px;
+      position: absolute;
+    }
+    .background-btn {
+      top: 10px;
+      right: 10px;
+      width: 70px;
+      height: 70px;
+      position: absolute;
+    }
+    .quotation {
+      position: absolute;
+      bottom: 0px;
+    }
+  }
+
+  .weather-block {
+    flex-direction: column;
+    width: 15rem;
+  }
+}
