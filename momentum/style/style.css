@@ -1,0 +1,187 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-shadow: 1px 1px 2px black;
+}
+
+.btn {
+  background: rgba(189, 195, 199, 0.3);
+  color: white;
+  font-size: 1rem;
+  width: 100px;
+  height: 100px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background: silver;
+  color: #000000;
+}
+
+.btn:active,
+.btn:focus {
+  outline: 0;
+}
+
+.btn:active {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center center;
+  color: #fff;
+  -webkit-transition: background-image 0.7s ease-in-out;
+  transition: background-image 0.7s ease-in-out;
+}
+
+.main-block .time {
+  font-size: 7rem;
+}
+
+.main-block .time .dateDescription {
+  font-size: 2rem;
+}
+
+.main-block h1 {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.main-block h1 span {
+  display: inline-block;
+  outline: none;
+}
+
+.main-block h2 {
+  margin-bottom: 0.5rem;
+  outline: none;
+}
+
+.func-block {
+  margin-top: 2rem;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.func-block .quotation {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  font-style: italic;
+}
+
+.func-block .quotation blockquote {
+  margin-bottom: 1rem;
+}
+
+.weather-block {
+  margin-top: 3rem;
+  width: 50rem;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border: 1px solid white;
+  background: rgba(189, 195, 199, 0.3);
+  color: white;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+}
+
+.weather-block .owf {
+  font-size: 4rem;
+}
+
+.weather-block * {
+  margin-bottom: 0.3rem;
+}
+
+@media (max-width: 850px) {
+  html {
+    font-size: 14px;
+  }
+  .func-block {
+    height: 10rem;
+  }
+  .weather-block {
+    width: 40rem;
+  }
+}
+
+@media (max-width: 850px) {
+  html {
+    font-size: 12px;
+  }
+  .main-block .time {
+    font-size: 4rem;
+  }
+  .main-block .time .dateDescription {
+    font-size: 1.5rem;
+  }
+  .main-block h2 {
+    font-size: 1.5rem;
+  }
+  .func-block {
+    position: relative;
+    height: 20rem;
+  }
+  .func-block .quotation-btn {
+    top: 10px;
+    left: 10px;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+  }
+  .func-block .background-btn {
+    top: 10px;
+    right: 10px;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+  }
+  .func-block .quotation {
+    position: absolute;
+    bottom: 0px;
+  }
+  .weather-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 15rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
