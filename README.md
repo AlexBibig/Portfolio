@@ -18,6 +18,12 @@ Used technologies: Scss, BEM-Metodology, Native JavaScript
 
 [Click to open](https://alexbibig.github.io/Portfolio/rsschool-shelter/pages/main/main.html)
 
+## The Rolling Scopes School - Momentum
+
+Used technologies: Native JavaScript
+
+[Click to open](https://alexbibig.github.io/Portfolio/momentum/)
+
 ## The Rolling Scopes School - Calculator
 
 Used technologies: OOP, Native JavaScript
