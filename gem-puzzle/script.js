@@ -2,7 +2,7 @@ let numbersOfButtons = 16,
   oneButtonSize = 75,
   buttonSizes = 74,
   moveCounter = 0,
-  sound = true,
+  sound = false,
   gamePaused = false,
   gameTime = 0,
   positions = [];
@@ -51,7 +51,7 @@ function initElements() {
 
   const soundButton = document.createElement('p');
   soundButton.classList.add('resume-item', 'sound-button');
-  soundButton.innerHTML = `<i class="material-icons">volume_up</i>`;
+  soundButton.innerHTML = `<i class="material-icons">volume_off</i>`;
   resumeItems.append(soundButton);
 
   const newGameItems = document.createElement('div');
@@ -92,9 +92,15 @@ function initGame(savedGameValues) {
   let numbers = savedGameValues ? savedGameValues : randomize();
 
   for (let i = 0; i < numbers.length; i++) {
-    const value = savedGameValues ? savedGameValues[i].value : numbers[i];
-    const left = savedGameValues ? savedGameValues[i].left : i % Math.sqrt(numbersOfButtons);
-    const top = savedGameValues ? savedGameValues[i].top : (i - left) / Math.sqrt(numbersOfButtons);
+    const value = savedGameValues
+      ? savedGameValues[i].value
+      : numbers[i];
+    const left = savedGameValues
+      ? savedGameValues[i].left
+      : i % Math.sqrt(numbersOfButtons);
+    const top = savedGameValues
+      ? savedGameValues[i].top
+      : (i - left) / Math.sqrt(numbersOfButtons);
 
     if (value) {
       const button = document.createElement('button');
@@ -173,7 +179,7 @@ function restart() {
 
 function moveButton(index) {
   const buttonPosition = positions[index];
-  const emptyField = positions.filter(el => el.value === 0);
+  const emptyField = positions.filter((el) => el.value === 0);
 
   const leftDiff = Math.abs(emptyField[0].left - buttonPosition.left);
   const topDiff = Math.abs(emptyField[0].top - buttonPosition.top);
@@ -182,8 +188,12 @@ function moveButton(index) {
     return;
   }
 
-  buttonPosition.element.style.left = `${emptyField[0].left * oneButtonSize}px`;
-  buttonPosition.element.style.top = `${emptyField[0].top * oneButtonSize}px`;
+  buttonPosition.element.style.left = `${
+    emptyField[0].left * oneButtonSize
+  }px`;
+  buttonPosition.element.style.top = `${
+    emptyField[0].top * oneButtonSize
+  }px`;
 
   const emptyLeft = emptyField[0].left;
   const emptyTop = emptyField[0].top;
@@ -198,16 +208,22 @@ function moveButton(index) {
 
   move.innerHTML = `Moves: ${++moveCounter}`;
 
-  let finalPositions = positions.filter(el => el.value !== 0);
-  let zeroPosition = positions.find(el => el.value === 0);
+  let finalPositions = positions.filter((el) => el.value !== 0);
+  let zeroPosition = positions.find((el) => el.value === 0);
 
   const isFinished =
-    finalPositions.every(position => {
-      return position.value === position.top * Math.sqrt(numbersOfButtons) + position.left;
-    }) ||
-    finalPositions.every(position => {
+    finalPositions.every((position) => {
       return (
-        position.value === position.top * Math.sqrt(numbersOfButtons) + position.left + 1 &&
+        position.value ===
+        position.top * Math.sqrt(numbersOfButtons) + position.left
+      );
+    }) ||
+    finalPositions.every((position) => {
+      return (
+        position.value ===
+          position.top * Math.sqrt(numbersOfButtons) +
+            position.left +
+            1 &&
         zeroPosition.value === zeroPosition.left - zeroPosition.top
       );
     });
@@ -277,13 +293,27 @@ keepPlaying.addEventListener('click', () => {
 });
 
 loadSavedGame.addEventListener('click', () => {
-  const savedGameValues = JSON.parse(localStorage.getItem('positions'));
+  const savedGameValues = JSON.parse(
+    localStorage.getItem('positions'),
+  );
   const savedGameMoves = localStorage.getItem('moves');
   const savedGameTime = localStorage.getItem('time');
-  const savedOneButtonSize = localStorage.getItem('oneButtonSize', oneButtonSize);
-  const savedButtonSizes = localStorage.getItem('buttonSizes', buttonSizes);
+  const savedOneButtonSize = localStorage.getItem(
+    'oneButtonSize',
+    oneButtonSize,
+  );
+  const savedButtonSizes = localStorage.getItem(
+    'buttonSizes',
+    buttonSizes,
+  );
 
-  loadGame(savedGameValues, savedGameMoves, savedGameTime, savedOneButtonSize, savedButtonSizes);
+  loadGame(
+    savedGameValues,
+    savedGameMoves,
+    savedGameTime,
+    savedOneButtonSize,
+    savedButtonSizes,
+  );
   overlay.classList.remove('overlay_show');
 
   gamePaused = !gamePaused;

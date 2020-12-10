@@ -130,12 +130,6 @@ button:hover {
   display: flex;
 }
 
-.overlay .resume-items > *,
-.overlay .new-game-items > * {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
 .overlay .resume-items > *:hover,
 .overlay .resume-items :active,
 .overlay .new-game-items > *:hover,

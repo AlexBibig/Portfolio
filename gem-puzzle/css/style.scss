@@ -95,9 +95,7 @@ button:hover {
   .new-game-items {
     margin: 0 auto;
     display: flex;
-    > * {
-      transition: 0.5s;
-    }
+
     > *:hover,
     :active {
       transform: scale(1.2);
