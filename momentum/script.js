@@ -1,7 +1,5 @@
 const time = document.querySelector('.time');
 const greeting = document.querySelector('.greeting');
-const name = document.querySelector('.name');
-const focus = document.querySelector('.focus');
 
 // update background
 
@@ -9,7 +7,9 @@ let today = new Date();
 let buttonCounter = today.getHours();
 let randomBackgrounds = getRandomBackgrounds();
 let currentBackground;
-const upgradeBackgroundBtn = document.querySelector('.background-btn');
+const upgradeBackgroundBtn = document.querySelector(
+  '.background-btn',
+);
 
 // update quote
 
@@ -21,7 +21,9 @@ const upgradeQuotationBtn = document.querySelector('.quotation-btn');
 
 const weatherIcon = document.querySelector('.weather-icon');
 const temperature = document.querySelector('.temperature');
-const weatherDescription = document.querySelector('.weather-discription');
+const weatherDescription = document.querySelector(
+  '.weather-discription',
+);
 const city = document.querySelector('.city');
 const windSpeed = document.querySelector('.windSpeed');
 const humidity = document.querySelector('.humidity');
@@ -30,7 +32,15 @@ const weatherError = document.querySelector('.weather-error');
 // show time
 
 function showTime() {
-  const daysArr = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const daysArr = [
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+  ];
   const monthsArr = [
     'January',
     'February',
@@ -56,7 +66,9 @@ function showTime() {
 
   time.innerHTML = `<p class='dateDescription'>${day}, ${month} ${date}</p> ${addZero(
     hour,
-  )}<span>:</span>${addZero(minutes)}<span>:</span>${addZero(seconds)}`;
+  )}<span>:</span>${addZero(minutes)}<span>:</span>${addZero(
+    seconds,
+  )}`;
   setTimeout(showTime, 1000);
 }
 function addZero(n) {
@@ -68,7 +80,10 @@ function addZero(n) {
 function getRandomBackgrounds(min = 1, max = 20, n = 6) {
   function randomize() {
     const result = new Set();
-    while (result.size < n) result.add(addZero(Math.floor(Math.random() * (max - min + 1)) + min));
+    while (result.size < n)
+      result.add(
+        addZero(Math.floor(Math.random() * (max - min + 1)) + min),
+      );
     return Array.from(result);
   }
 
@@ -76,16 +91,24 @@ function getRandomBackgrounds(min = 1, max = 20, n = 6) {
 
   for (let i = 0; i < 4; i++) {
     if (i === 0) {
-      randomize().forEach(el => result.push(`./assets/images/night/${el}.jpg`));
+      randomize().forEach((el) =>
+        result.push(`./assets/images/night/${el}.jpg`),
+      );
     }
     if (i === 1) {
-      randomize().forEach(el => result.push(`./assets/images/morning/${el}.jpg`));
+      randomize().forEach((el) =>
+        result.push(`./assets/images/morning/${el}.jpg`),
+      );
     }
     if (i === 2) {
-      randomize().forEach(el => result.push(`./assets/images/day/${el}.jpg`));
+      randomize().forEach((el) =>
+        result.push(`./assets/images/day/${el}.jpg`),
+      );
     }
     if (i === 3) {
-      randomize().forEach(el => result.push(`./assets/images/evening/${el}.jpg`));
+      randomize().forEach((el) =>
+        result.push(`./assets/images/evening/${el}.jpg`),
+      );
     }
   }
 
@@ -126,14 +149,17 @@ function setNewBackground() {
 // getQuote
 
 async function getQuote() {
-  const url = `https://quote-garden.herokuapp.com/api/v2/quotes/random`;
+  const url = `https://favqs.com/api/qotd`;
   const res = await fetch(url);
   const data = await res.json();
-  blockquote.innerText = `" ${data.quote.quoteText} "`;
-  figcaption.textContent = data.quote.quoteAuthor;
+  blockquote.innerText = `" ${data.quote.body} "`;
+  figcaption.textContent = data.quote.author;
 }
 
 // Name and Focus to LocalStorage
+
+let name = document.querySelector('.name');
+let focus = document.querySelector('.focus');
 
 function getName() {
   if (localStorage.getItem('name') === null) {
@@ -154,7 +180,10 @@ function setName(e) {
         name.innerText = localStorage.getItem('name');
         e.preventDefault();
         name.blur();
-      } else if (name.innerText === '' && localStorage.getItem('name') === null) {
+      } else if (
+        name.innerText === '' &&
+        localStorage.getItem('name') === null
+      ) {
         name.innerText = '[Enter Name]';
       } else {
         localStorage.setItem('name', e.target.innerText);
@@ -189,7 +218,10 @@ function setFocus(e) {
         focus.textContent = localStorage.getItem('focus');
         e.preventDefault();
         focus.blur();
-      } else if (focus.textContent === '' && localStorage.getItem('focus') === null) {
+      } else if (
+        focus.textContent === '' &&
+        localStorage.getItem('focus') === null
+      ) {
         focus.textContent = '[Enter focus]';
       } else {
         localStorage.setItem('focus', e.target.innerText);
