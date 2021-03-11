@@ -6,6 +6,14 @@ My Curriculum vitae
 
 [Click to open](https://alexbibig.github.io/Portfolio/cv/)
 
+## The Rolling Scopes School - React Game Hangman (in development)
+
+Used technologies: React, React Hooks, Typescript
+
+[preview](https://alexbibig.github.io/react-game/)
+
+[code](https://github.com/AlexBibig/react-game/tree/react-game)
+
 ## TeachMeSkills Course Project - Rick & Morty Database
 
 Used technologies: React, React Hooks, React-Redux, React-Router, Redux-Thunk
@@ -13,6 +21,14 @@ Used technologies: React, React Hooks, React-Redux, React-Router, Redux-Thunk
 [preview](https://alexbibig.github.io/TMS-React-Rick-Morty-DataBase/)
 
 [code](https://github.com/AlexBibig/TMS-React-Rick-Morty-DataBase)
+
+## The Rolling Scopes School - Todoist Clone
+
+Used technologies: React, React Hooks, React-Redux, React-Router, Redux-Thunk
+
+[preview](https://alexbibig.github.io/Todoist-Clone/)
+
+[code](https://github.com/AlexBibig/Todoist-Clone/tree/develop)
 
 ## The Rolling Scopes School - Gem Puzzle
 
