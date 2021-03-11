@@ -1,0 +1,394 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+}
+
+.body {
+  &_no-scroll {
+    overflow: hidden;
+  }
+}
+
+.header {
+  &__container {
+    padding: 30px 10px;
+    text-align: center;
+  }
+
+  &__title {
+    color: darkslategray;
+    text-align: center;
+  }
+
+  &__points-container {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    span {
+      margin: 0 5px;
+      font-size: 2rem;
+    }
+  }
+
+  &__swicher {
+    padding: 1px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1),
+      -1px -1px 1px rgba(0, 0, 0, 0.1);
+    width: 100px;
+    height: 36px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    border-radius: 18px;
+    background-color: darkslategray;
+    transition: 0.8s;
+    button {
+      width: 28px;
+      height: 28px;
+      border: none;
+      border-radius: 50%;
+      background-color: #fff;
+      position: absolute;
+      left: 4px;
+      top: 4px;
+      outline: none;
+      cursor: pointer;
+      box-shadow: inherit;
+      transition: 0.8s;
+    }
+    span {
+      font-weight: bold;
+      font-size: 1.3rem;
+    }
+    .swicher-train {
+      color: darkslategray;
+      visibility: hidden;
+    }
+    .swicher-play {
+      color: white;
+      visibility: visible;
+    }
+  }
+  &__swicher-active {
+    background-color: skyblue;
+    button {
+      background-color: #fff;
+      left: auto;
+      right: 4px;
+    }
+    .swicher-train {
+      visibility: visible;
+    }
+    .swicher-play {
+      visibility: hidden;
+    }
+  }
+}
+.aside {
+  &__burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    z-index: 3;
+
+    width: 30px;
+    height: 30px;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  &__burger-menu-line {
+    width: 100%;
+    height: 3px;
+    background: darkslategray;
+    transition: all 0.5s;
+  }
+
+  &__burger-menu_open &__burger-menu-line_line-1 {
+    transform: rotateZ(-405deg) translate(-9px, -5px);
+  }
+
+  &__burger-menu_open &__burger-menu-line_line-2 {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__burger-menu_open &__burger-menu-line_line-3 {
+    transform: rotateZ(405deg) translate(-19px, -5px);
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 320px;
+    height: 100vh;
+    position: fixed;
+    z-index: 2;
+    top: 0px;
+    left: -320px;
+
+    transition: 0.5s;
+    overflow: hidden;
+    border-radius: 0 30% 30% 0;
+
+    list-style: none;
+  }
+
+  &__nav_open {
+    left: 0px;
+    background-color: skyblue;
+  }
+
+  &__nav-link {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: darkslategray;
+  }
+  &__nav-link:hover {
+    text-decoration: none;
+    color: darkslategray;
+    cursor: pointer;
+  }
+  &__nav-link_active {
+    padding: 10px;
+    font-weight: bolder;
+    text-shadow: 0 0 10px #fff;
+    font-size: 1.5rem;
+  }
+}
+.main {
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 50px;
+    > h2 {
+      color: darkslategray;
+      font-size: 5rem;
+      text-align: center;
+    }
+    table {
+      width: 100%;
+      * {
+        border: 1px solid black;
+        width: 100px;
+        height: 50px;
+        font-size: 0.9rem;
+        text-align: center;
+      }
+      th {
+        background-color: skyblue;
+      }
+    }
+  }
+  &__start-game-button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+
+    color: darkslategray;
+    text-shadow: 0 0 10px #fff;
+    background-color: gold;
+
+    position: fixed;
+    z-index: 5;
+    right: 30px;
+    transition: 0.5s;
+  }
+
+  &__start-game-button:focus {
+    outline: none;
+  }
+  &__start-game-button:hover {
+    transform: scale(1.2);
+  }
+
+  &__folder,
+  &__card {
+    width: 290px;
+    height: 290px;
+    border-radius: 15px;
+    margin: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    transition: 0.5s;
+    cursor: pointer;
+    h2,
+    h3 {
+      color: darkslategray;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      text-align: center;
+      transition: 0.5s;
+    }
+  }
+
+  &__folder {
+    background: linear-gradient(
+      180deg,
+      skyblue,
+      darkslategray 40%,
+      #fff 0,
+      #fff
+    );
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 30%;
+      border: 5px solid #fff;
+      object-fit: cover;
+      margin: 30px auto;
+      transition: 0.5s;
+    }
+  }
+  &__folder:hover {
+    box-shadow: 0 0 30px darkslategray;
+
+    h2 {
+      transform: scale(1.1);
+    }
+    img {
+      transform: scale(1.1);
+    }
+  }
+
+  &__card {
+    background: none;
+    position: relative;
+    height: auto;
+
+    * {
+      border-radius: inherit;
+    }
+    div {
+      width: inherit;
+    }
+  }
+
+  &__card-front,
+  &__card-back {
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+    backface-visibility: hidden;
+    img {
+      color: red;
+      width: inherit;
+      height: 193px;
+      object-fit: cover;
+      border-bottom-left-radius: unset;
+      border-bottom-right-radius: unset;
+    }
+    h3 {
+      font-style: italic;
+      padding: 30px;
+    }
+  }
+
+  &__card-front:hover,
+  &__card-back:hover {
+    box-shadow: 0 0 30px darkslategray;
+  }
+
+  &__card-front {
+    visibility: visible;
+    transition: 0.5s;
+    transform: rotateY(0deg);
+    .translate-button {
+      visibility: visible;
+      img {
+        width: 10%;
+        height: auto;
+        position: absolute;
+        z-index: 2;
+        bottom: 10px;
+        right: 10px;
+        transition: 0.5s;
+      }
+      img:hover {
+        transform: scale(1.2);
+        transform: rotate(-180deg);
+      }
+    }
+  }
+  &__card-back {
+    visibility: hidden;
+    transition: 0.5s;
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__card-front_reverse {
+    visibility: hidden;
+    transform: rotateY(180deg);
+    .translate-button {
+      visibility: hidden;
+    }
+  }
+  &__card-back_reverse {
+    visibility: visible;
+    transform: rotateY(0deg);
+  }
+
+  &__folder_game-mode {
+    transition: 1s;
+    img {
+      border: 5px solid gold;
+    }
+  }
+  &__card_game-mode {
+    img {
+      border-radius: inherit;
+    }
+    h3 {
+      display: none;
+    }
+    .translate-button {
+      visibility: hidden;
+    }
+  }
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: rgba(41, 41, 41, 0.6);
+  visibility: hidden;
+  &_show {
+    visibility: visible;
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    &__container {
+      padding: 30px 70px;
+    }
+
+    &__title {
+      font-size: 1.8rem;
+    }
+  }
+}
