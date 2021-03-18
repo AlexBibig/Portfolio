@@ -22,13 +22,13 @@ Used technologies: React, React Hooks, React-Redux, React-Router, Redux-Thunk
 
 [code](https://github.com/AlexBibig/TMS-React-Rick-Morty-DataBase)
 
-## The Rolling Scopes School - Todoist Clone
+## The Rolling Scopes School - Todoist
 
-Used technologies: React, React Hooks, React-Redux, React-Router, Redux-Thunk
+Used technologies: React
 
-[preview](https://alexbibig.github.io/Todoist-Clone/)
+[preview](https://alexbibig.github.io/TMS-React-toDoList/)
 
-[code](https://github.com/AlexBibig/Todoist-Clone/tree/develop)
+[code](https://github.com/AlexBibig/TMS-React-toDoList)
 
 ## The Rolling Scopes School - Gem Puzzle
 
