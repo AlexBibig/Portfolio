@@ -26,9 +26,9 @@ Used technologies: React, React Hooks, React-Redux, React-Router, Redux-Thunk
 
 Used technologies: React
 
-[preview](https://alexbibig.github.io/TMS-React-toDoList/)
+[preview](https://alexbibig.github.io/Todoist-Clone/)
 
-[code](https://github.com/AlexBibig/TMS-React-toDoList)
+[code](https://github.com/AlexBibig/Todoist-Clone/tree/develop)
 
 ## The Rolling Scopes School - Gem Puzzle
 
